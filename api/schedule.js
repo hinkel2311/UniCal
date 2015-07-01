@@ -4,7 +4,6 @@ var exec = require('child_process').exec;
 var CronJob = require('cron').CronJob;
 
 schedule = function (onRdy) {
-
     var _this = this;
     var file = './cron.json';
     this.jobs = {};
@@ -78,12 +77,11 @@ schedule = function (onRdy) {
         }
 
         if (dynamic) {
-            exec("python /var/unical/unical/unical.py -rid " + room + " -nw " + weeks, out);
+            exec("python "+scriptPath+"unical.py -rid " + room + " -nw " + weeks, out);
         } else {
-            exec("python /var/unical/unical/unical.py -rid " + room + " -w " + weeks, out);
+            exec("python "+scriptPath+"unical.py -rid " + room + " -w " + weeks, out);
         }
     }
-
 
 }
 

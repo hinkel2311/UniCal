@@ -67,7 +67,7 @@ api = function (router) {
         });
 
         router.get("/api/getCal/:file", function (request, response) {
-            response.sendFile('/var/unical/unical/save/' + request.params.file);
+            response.sendFile(scriptPath+'save/' + request.params.file);
         });
 
         router.get('/api/rooms', function (request, response) {
