@@ -10,4 +10,4 @@
 
 ## how to start?
 
-node server.js -port <port> -sp <path to unical python folder>
+node server.js -port \<port\> -sp \<path to unical python folder\>
