@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>UniCal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/_css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/_css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" type="text/css" href="/_css/jquery-ui.structure.css">
+        <link rel="stylesheet" type="text/css" href="/_css/jquery-ui.theme.min.css">
+
+        <script src="/_js/jquery-2.1.4.min.js" ></script>
+        <script src="/_js/bootstrap.js" ></script>
+        <script src="/_js/bootstrap-datepicker.min.js" ></script>
+        <script src="/_js/jquery-ui.min.js" ></script>
+        <script src="/_js/unical.js" ></script>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1>UniCal <small>R&auml;ume als iCalender</small></h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="well">
+            <div class="input-group">
+                <input type="text" class="_room form-control" autocomplete="off" spellcheck="false">
+                <span class="input-group-btn">
+                    <button class="_submit btn btn-default" type="button">Go!</button>
+                </span>
+            </div>
+        </div>
+        <!--
+        <div class="well">
+            <div class="">
+                <input type="text" class="_start datepicker input-small" value="" />
+                <span class="add-on">to</span>
+                <input type="text" class="_end datepicker input-small" value="" />
+            </div>
+        </div>
+        -->
+        <div id="modal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">iCal URL</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p class="_url"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
+        <div class="well">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                    dieses Semester
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    aktuelle und n&auml;chste Woche
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                    n&auml;chste 2 Monate
+                </label>
+            </div>
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">
+                    <span class="add-on">von</span>
+                    <input type="text" class="_start datepicker input-small" value="" />
+                    <span class="add-on">bis</span>
+                    <input type="text" class="_end datepicker input-small" value="" />
+                </label>
+            </div>
+
+            <!--
+            <div class="radio">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Option two can be something else and selecting it will deselect option one
+                </label>
+            </div>
+            <div class="radio disabled">
+                <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                    Option three is disabled
+                </label>
+            </div>
+            -->
+        </div>
+
+
+
+    </body>
+</html>
