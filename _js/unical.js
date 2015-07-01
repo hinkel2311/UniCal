@@ -8,6 +8,7 @@ Date.prototype.getWeek = function () {
 var roomid;
 
 $(document).ready(function () {
+    $('.qislink').hide();
     $('._submit').unbind('click').click(function (ev) {
         ev.preventDefault();
         //var room = $('._room').val();
@@ -86,47 +87,20 @@ $(document).ready(function () {
                 }
                 post({room: room, weeks: weeks});
 
-//                $.post("/api/ical", {room: room, weeks: weeks}, function (data) {
-//                    if (data.success) {
-//                        var url = "http://dev.qrizl.com:1339" + data.url;
-//                        $('._url').html('ical unter folgender url: <a href="' + url + '">' + url + ' </a>');
-//                        $('#modal').modal('show');
-//                    } else {
-//                        $('._url').html('fehler: <p>' + data.error + ' </p>');
-//                        $('#modal').modal('show');
-//                    }
-//                });
+
 
                 break;
             case "option2":
                 var nweeks = 2;
                 post({room: room, nweeks: nweeks});
-//                $.post("/api/ical", {room: room, nweeks: nweeks}, function (data) {
-//                    if (data.success) {
-//                        var url = "http://dev.qrizl.com:1339" + data.url;
-//                        $('._url').html('ical unter folgender url: <a href="' + url + '">' + url + ' </a>');
-//                        $('#modal').modal('show');
-//                    } else {
-//                        $('._url').html('fehler: <p>' + data.error + ' </p>');
-//                        $('#modal').modal('show');
-//                    }
-//                });
+
 
                 break;
             case "option3":
 
                 var nweeks = 8;
                 post({room: room, nweeks: nweeks});
-//                $.post("/api/ical", {room: room, nweeks: nweeks}, function (data) {
-//                    if (data.success) {
-//                        var url = "http://dev.qrizl.com:1339" + data.url;
-//                        $('._url').html('ical unter folgender url: <a href="' + url + '">' + url + ' </a>');
-//                        $('#modal').modal('show');
-//                    } else {
-//                        $('._url').html('fehler: <p>' + data.error + ' </p>');
-//                        $('#modal').modal('show');
-//                    }
-//                });
+
 
                 break;
             case "option4":
@@ -177,16 +151,7 @@ $(document).ready(function () {
                     return;
                 }
                 post({room: room, weeks: weeks});
-//                $.post("/api/ical", {room: room, weeks: weeks}, function (data) {
-//                    if (data.success) {
-//                        var url = "http://dev.qrizl.com:1339" + data.url;
-//                        $('._url').html('ical unter folgender url: <a href="' + url + '">' + url + ' </a>');
-//                        $('#modal').modal('show');
-//                    } else {
-//                        $('._url').html('fehler: <p>' + data.error + ' </p>');
-//                        $('#modal').modal('show');
-//                    }
-//                });
+
 
                 break;
             default:
@@ -218,6 +183,9 @@ $(document).ready(function () {
         select: function (a, b) {
             $(this).val(b.item.value);
             roomid = roomsobj[b.item.value];
+            var link = "https://qis.verwaltung.uni-hannover.de/qisserver/servlet/de.his.servlet.RequestDispatcherServlet?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoRaum&publishSubDir=raum&keep=y&raum.rgid="+roomid;
+            $('.qislink').html('<a href="'+link+'">Raum im qis</a>');
+            $('.qislink').show();
         }
     });
 
