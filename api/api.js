@@ -53,7 +53,6 @@ api = function (router) {
             schedule.startAndScheduleIcal(room, weekstr, dynamicWeeks, crontime, function (error) {
                 response.json({error:error});
             }, function () {
-                console.log('successful');
 
                 if (dynamicWeeks) {
                     response.json({success:1,url: "/api/getCal/schedule.icsroom" + room + "nextweeks" + nweeks + ".ics"});
