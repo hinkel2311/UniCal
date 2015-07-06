@@ -55,10 +55,10 @@ api = function (router) {
             }, function () {
 
                 if (dynamicWeeks) {
-                    response.json({success:1,url: "/api/getCal/schedule.icsroom" + room + "nextweeks" + nweeks + ".ics"});
+                    response.json({success:1,url: "api/getCal/schedule.icsroom" + room + "nextweeks" + nweeks + ".ics"});
                 } else {
                     var weekshortstr = weeks[0] + '-' + weeks[weeks.length - 1];
-                    response.json({success:1,url: "/api/getCal/schedule.icsroom" + room + "week" + weekshortstr + ".ics"});
+                    response.json({success:1,url: "api/getCal/schedule.icsroom" + room + "week" + weekshortstr + ".ics"});
                 }
 
             });
@@ -70,9 +70,11 @@ api = function (router) {
         });
 
         router.get('/api/rooms', function (request, response) {
-
+            
             var term = request.param('term');
-
+            
+            console.log(term);
+            
             if (term) {
 
                 var terms = term.trim().split(" ");

@@ -24,10 +24,10 @@ $(document).ready(function () {
 
             $('._url').html('Loading...');
             $('#modal').modal('show');
-            $.post("/api/ical", obj, function (data) {
+            $.post("api/ical", obj, function (data) {
 
                 if (data.success) {
-                    var url = "http://dev.qrizl.com:1339" + data.url;
+                    var url = "" + window.location.href  + data.url;
                     $('._url').html('ical unter folgender url: <a href="' + url + '">' + url + ' </a>');
                 } else {
                     $('._url').html('fehler: <p>' + data.error + ' </p>');
@@ -173,7 +173,7 @@ $(document).ready(function () {
 
             console.log(term);
 
-            $.get("/api/rooms", {term: term}, function (data) {
+            $.get("api/rooms", {term: term}, function (data) {
                 $(".result").html(data);
                 roomsobj = data.rooms;
                 response(Object.keys(data.rooms));

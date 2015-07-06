@@ -30,7 +30,9 @@ server = function () {
     if (!scriptPath) {
         throw new Error('You must enter a script path.  -sp <path to script>');
     }
-
+    
+    
+    
     this.router.use(bodyParser.urlencoded({extended: true}));
     this.router.use(bodyParser.json());
 
