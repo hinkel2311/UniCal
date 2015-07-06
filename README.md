@@ -7,6 +7,11 @@
 - [body-parser](https://www.npmjs.com/package/body-parser)
 - [unical python](https://github.com/knoxz/unical)
 
+## installation
+
+just clone this repo and then run "npm install".
+after that, clone [unical python](https://github.com/knoxz/unical) and make sure your webuser has rw rights to scripts folder and the script.
+
 
 ## how to start?
 
