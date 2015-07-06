@@ -72,9 +72,6 @@ api = function (router) {
         router.get('/api/rooms', function (request, response) {
             
             var term = request.param('term');
-            
-            console.log(term);
-            
             if (term) {
 
                 var terms = term.trim().split(" ");
