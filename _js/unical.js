@@ -8,7 +8,7 @@ Date.prototype.getWeek = function () {
 var roomid;
 
 $(document).ready(function () {
-    $('.qislink').hide();
+    $('.qisgrp').hide();
     $('._submit').unbind('click').click(function (ev) {
         ev.preventDefault();
         //var room = $('._room').val();
@@ -185,7 +185,7 @@ $(document).ready(function () {
             roomid = roomsobj[b.item.value];
             var link = "https://qis.verwaltung.uni-hannover.de/qisserver/servlet/de.his.servlet.RequestDispatcherServlet?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoRaum&publishSubDir=raum&keep=y&raum.rgid="+roomid;
             $('.qislink').html('<a href="'+link+'">Raum im qis</a>');
-            $('.qislink').show();
+            $('.qisgrp').show();
         }
     });
 

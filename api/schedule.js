@@ -75,11 +75,15 @@ schedule = function (onRdy) {
             }
 
         }
-
+        
+		
+		var output = scriptPath+'save/schedule.ics';
+		
         if (dynamic) {
-            exec("python "+scriptPath+"unical.py -rid " + room + " -nw " + weeks, out);
+        
+            exec("python "+scriptPath+"unical.py -rid " + room + " -nw " + weeks + " -o "+output, out);
         } else {
-            exec("python "+scriptPath+"unical.py -rid " + room + " -w " + weeks, out);
+            exec("python "+scriptPath+"unical.py -rid " + room + " -w " + weeks + " -o "+output, out);
         }
     }
 
