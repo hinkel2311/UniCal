@@ -11,6 +11,8 @@
 
 Just clone this repo and then run "npm install".
 After that, clone [unical python](https://github.com/knoxz/unical) and make sure your webuser has rw rights to scripts folder and the script.
+Install requirements with:
+pip install -r requirements.txt
 
 
 ## how to start?
