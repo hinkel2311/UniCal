@@ -8,7 +8,7 @@ Date.prototype.getWeek = function () {
 var roomid;
 
 $(document).ready(function () {
-    $('.qisgrp').hide();
+    $('.qislink').hide();
     $('._submit').unbind('click').click(function (ev) {
         ev.preventDefault();
         //var room = $('._room').val();
@@ -27,7 +27,7 @@ $(document).ready(function () {
             $.post("api/ical", obj, function (data) {
 
                 if (data.success) {
-                    var url = "" + window.location.href  + data.url;
+                    var url = "" + window.location.href + data.url;
                     $('._url').html('ical unter folgender url: <a href="' + url + '">' + url + ' </a>');
                 } else {
                     $('._url').html('fehler: <p>' + data.error + ' </p>');
@@ -171,11 +171,10 @@ $(document).ready(function () {
         source: function (request, response) {
             var term = request.term.toString();
 
-            console.log(term);
-
             $.get("api/rooms", {term: term}, function (data) {
                 $(".result").html(data);
                 roomsobj = data.rooms;
+
                 response(Object.keys(data.rooms));
             });
 
@@ -183,10 +182,11 @@ $(document).ready(function () {
         select: function (a, b) {
             $(this).val(b.item.value);
             roomid = roomsobj[b.item.value];
-            var link = "https://qis.verwaltung.uni-hannover.de/qisserver/servlet/de.his.servlet.RequestDispatcherServlet?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoRaum&publishSubDir=raum&keep=y&raum.rgid="+roomid;
-            $('.qislink').html('<a href="'+link+'">Raum im qis</a>');
-            $('.qisgrp').show();
+            var link = "https://qis.verwaltung.uni-hannover.de/qisserver/servlet/de.his.servlet.RequestDispatcherServlet?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoRaum&publishSubDir=raum&keep=y&raum.rgid=" + roomid;
+            $('.qislink').html('<a href="' + link + '">Raum im qis</a>');
+            $('.qislink').show();
         }
     });
+
 
 });
