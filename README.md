@@ -1,6 +1,6 @@
 # UniCal
 
-A complete solution for gettings the occupancy of rooms of the Universitiy Hannover as calendar data.
+A complete solution for getting the occupancy of rooms of the Universitiy Hannover as calendar data.
 The Project is devided into two parts. A node js backend which supplies the webinterface and a Python script for creating the calendar data. 
 The calendar data is parsed from a HTML table out of the [HIS-QIS System](https://qis.verwaltung.uni-hannover.de/) from the University of Hannover.
 The data is supplied in iCal format which can be importet by copying the downloaded file or adding the url into your calendar to be aware of changes.
@@ -21,8 +21,10 @@ The Project can be adoped in further student work. If you are intereset in it, p
 ## Installation
 
     $ git clone https://github.com/hinkel2311/UniCal.git
+    $ cd <UniCal node dir>
     $ npm install
     $ git clone https://github.com/knoxz/unical.git
+    $ cd <unical python dir>
     $ pip install -r requirements.txt
 
 ## Usage
