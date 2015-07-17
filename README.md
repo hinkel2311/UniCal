@@ -21,8 +21,10 @@ The Project can be adoped in further student work. If you are intereset in it, p
 ## Installation
 
     $ git clone https://github.com/hinkel2311/UniCal.git
+    $ cd <UniCal node dir>
     $ npm install
     $ git clone https://github.com/knoxz/unical.git
+    $ cd <unical python dir>
     $ pip install -r requirements.txt
 
 ## Usage
