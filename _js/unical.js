@@ -28,7 +28,7 @@ $(document).ready(function () {
 
                 if (data.success) {
                     var url = "" + window.location.href + data.url;
-                    $('._url').html('ical unter folgender url: <a href="' + url + '">' + url + ' </a>');
+                    $('._url').html('<a href="' + url + '">' + url + ' </a>');
                 } else {
                     $('._url').html('fehler: <p>' + data.error + ' </p>');
                 }
@@ -183,7 +183,7 @@ $(document).ready(function () {
             $(this).val(b.item.value);
             roomid = roomsobj[b.item.value];
             var link = "https://qis.verwaltung.uni-hannover.de/qisserver/servlet/de.his.servlet.RequestDispatcherServlet?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoRaum&publishSubDir=raum&keep=y&raum.rgid=" + roomid;
-            $('.qislink').html('<a href="' + link + '">Raum im qis</a>');
+            $('.qislink').html('<a href="' + link + '">Raum im HIS-QIS</a>');
             $('.qislink').show();
         }
     });
