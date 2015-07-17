@@ -43,9 +43,10 @@ schedule = function (onRdy) {
 
         var cronobj = {room: room, weeks: weeks, dynamic: dynamic, time: time};
 
-        if (this.jobs['' + room + weeks + dynamic + time]) {
+        if (this.jobs && this.jobs['' + room + weeks + dynamic + time]) {
 
         } else {
+            if (!this.jobs) this.jobs = {};
             this.jobs['' + room + weeks + dynamic + time] = cronobj;
         }
 
