@@ -9,7 +9,7 @@ TODO: Write a project description
 - [body-parser](https://www.npmjs.com/package/body-parser)
 - [unical python](https://github.com/knoxz/unical)
 
-## installation
+## Installation
 
     $ git clone https://github.com/hinkel2311/UniCal.git
     $ npm install
@@ -30,17 +30,4 @@ Starting the server:
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-6. 
 
-
-## History
-
-TODO: Write history
-
-## Credits
-
-TODO: Write credits
-
-## License
-
-TODO: Write license
