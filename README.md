@@ -1,5 +1,7 @@
 # UniCal
 
+TODO: Write a project description
+
 ##Dependencies:
 - [jsonfile](https://www.npmjs.com/package/jsonfile)
 - [node-cron](https://github.com/ncb000gt/node-cron)
