@@ -1,6 +1,15 @@
 # UniCal
 
-TODO: Write a project description
+A complete solution for gettings the occupancy of rooms of the Universitiy Hannover as calendar data.
+The Project is devided into two parts. A node js backend which supplies the webinterface and a Python script for creating the calendar data. 
+The calendar data is parsed from a HTML table out of the [HIS-QIS System](https://qis.verwaltung.uni-hannover.de/) from the University of Hannover.
+The data is supplied in iCal format which can be importet by copying the downloaded file or adding the url into your calendar to be aware of changes.
+The second options is what we recommend.
+
+UniCal was developed during a student porject at the University of Hannover in the curse "Labor-Webtechnologien" in summer semester 2015 headed by [Prof. Dr. rer. nat. Robert Jäschke](https://github.com/rjoberon)
+
+The Project can be adoped in further student work. If you are intereset in it, please contact Prof. Jäschke.
+
 
 ##Dependencies:
 - [jsonfile](https://www.npmjs.com/package/jsonfile)
