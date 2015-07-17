@@ -11,16 +11,15 @@ TODO: Write a project description
 
 ## installation
 
-Just clone this repo and then run "npm install".
-After that, clone [unical python](https://github.com/knoxz/unical) and make sure your webuser has rw rights to scripts folder and the script.
-Install requirements with:
-pip install -r requirements.txt
-
+    $ git clone https://github.com/hinkel2311/UniCal.git
+    $ npm install
+    $ git clone https://github.com/knoxz/unical.git
+    $ pip install -r requirements.txt
 
 ## Usage
 Starting the server:
- 
-  $ node server.js -port \<port\> -sp \<path to unical python folder\>
+
+    $ node server.js -port \<port\> -sp \<path to unical python folder\>
 
 
 
