@@ -19,7 +19,8 @@ pip install -r requirements.txt
 
 ## Usage
 Starting the server:
-node server.js -port \<port\> -sp \<path to unical python folder\>
+ 
+  $ node server.js -port \<port\> -sp \<path to unical python folder\>
 
 
 
