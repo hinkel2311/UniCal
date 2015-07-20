@@ -166,7 +166,10 @@ $(document).ready(function () {
         format: 'dd/mm/yyyy'
     });
 
-
+      
+    $("._room").unbind("change").change(function(ev){
+       roomid = null;
+    });
     $("._room").autocomplete({
         source: function (request, response) {
             var term = request.term.toString();
