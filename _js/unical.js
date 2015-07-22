@@ -167,7 +167,7 @@ $(document).ready(function () {
     });
 
       
-    $("._room").unbind("change").change(function(ev){
+    $("._room").unbind("keydown").keydown(function(ev){
        roomid = null;
     });
     $("._room").autocomplete({
