@@ -166,10 +166,6 @@ $(document).ready(function () {
         format: 'dd/mm/yyyy'
     });
 
-      
-    $("._room").unbind("keydown").keydown(function(ev){
-       roomid = null;
-    });
     $("._room").autocomplete({
         source: function (request, response) {
             var term = request.term.toString();
@@ -186,7 +182,7 @@ $(document).ready(function () {
             $(this).val(b.item.value);
             roomid = roomsobj[b.item.value];
             var link = "https://qis.verwaltung.uni-hannover.de/qisserver/servlet/de.his.servlet.RequestDispatcherServlet?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfoRaum&publishSubDir=raum&keep=y&raum.rgid=" + roomid;
-            $('.qislink').html('<a href="' + link + '">Raum im HIS-QIS</a>');
+            $('.qislink').html('<b>Ausgew&auml;hlter Raum:</b> <a href="' + link + '">' + b.item.value + '</a>');
             $('.qislink').show();
         }
     });
